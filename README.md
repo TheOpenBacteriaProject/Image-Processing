@@ -23,7 +23,11 @@ Una vez que hemos detectado las bacterias contaremos los pixeles que se han acti
 ## Transformada de Hough
 
 En esta sección, explicaremos más detenidamente la herramienta de inteligencia artificial que hemos utilizado para
- detectar la placa de petri, la llamada transformada de Hough.
+ detectar la placa de petri, la llamada transformada de Hough. Este es un método de extracción de características de imágenes para detectar formas. En primer lugar, fue propuesto para rectas aunque puede ser extendido para cualquier forma arbitraria. Tenemos una parametrización de la forma deseada y queremos aprender los parámetros de la forma y ver en qué lugar de la imagen se distribuyen. En este caso, queremos encontrar circunferencias, dada la imagen queremos como resultado el radio y centro de la circunferencia que representa a la placa de petri. 
+ 
+
  
  
  ## Binarización
+
+Con la binarización lo que buscamos es poder distinguir entre bacterias y fondos. En primer lugar pasamos la imagen a escala de grises. Las bacterias tienen un color gris más claro que el fondo por lo que establecemos un umbral de tal manera que si el valor del pixel es mayor que ese umbral lo activamos al máximo de brillo, en otro caso, lo desactivamos dejándolo en negro. Con este procedimiento tenemos una imagen de tal manera que los colores blancos corrwsponden a las bacterias y el negro al fondo. Así podemos calcular el área que ocupa las bacterias y ver donde se distribuyen.
