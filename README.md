@@ -28,14 +28,21 @@ En esta sección, explicaremos más detenidamente la herramienta de inteligencia
  
  [https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2}]
  
- De tal manera que nuestro espacio paramétrico sería (x_{0}, y_{0}, r).
+ De tal manera que nuestro espacio paramétrico sería https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
  
+ La idea del algoritmo es binarizar la imagen detectando aristas de la siguiente manera:
+ [aristas]
+ Podemos usar para esto, por ejemplo, el detector de Canny. El cual sirve para revelar los bordes de una imagen.
+ 
+ Una vez que tenemos una imagen binaria (blanco y negro) en la cual tenemos representadas las aristas, tenemos que ir "probando" con la figura que hemos elegido usando distintos valores de los parámetros. Se llama transformada, ya que buscaremos los posibles valores de los parámetros en el espacio paramétrico. Ahí buscaremos las figuras que se intersecan por lo tanto cuantas más intersecciones haya más votos hay para que por ahí pase nuestra figura. Un ejemplo ilustrativo de lo descrito es lo siguiente:
 
- 
+[Explicacion]
+
+En nuestro caso, hemos usado la función de OpenCV (una librería de software libre para visión por computador que está implementada entre otros lenguajes en python) para encontrar el círculo correspondiente a la placa de petri. Hemos elegido un rango entre el cual esperamos que se encuentre la placa y una distancia entre centros muy grande para que solo nos elija el círculo con más votos que será el de la placa.
  
  ## Binarización
 
-Con la binarización lo que buscamos es poder distinguir entre bacterias y fondos. En primer lugar pasamos la imagen a escala de grises. Las bacterias tienen un color gris más claro que el fondo por lo que establecemos un umbral de tal manera que si el valor del pixel es mayor que ese umbral lo activamos al máximo de brillo, en otro caso, lo desactivamos dejándolo en negro. Con este procedimiento tenemos una imagen de tal manera que los colores blancos corresponden a las bacterias y el negro al fondo. Así podemos calcular el área que ocupa las bacterias y ver donde se distribuyen.
+Con la binarización lo que buscamos es poder distinguir entre bacterias y fondos. En primer lugar pasamos la imagen a escala de grises. Las bacterias tienen un color gris más claro que el fondo por lo que establecemos un umbral de tal manera que si el valor del pixel es mayor que ese umbral lo activamos al máximo de brillo, en otro caso, lo desactivamos dejándolo en negro. Con este procedimiento tenemos una imagen de tal manera que los colores blancos corresponden a las bacterias y el negro al fondo. Así podemos calcular el área que ocupa las bacterias y ver donde se distribuyen. Ya que sabemos que el diámetro de la placa de petri es (y suele ser) de 9cm.
 
 
 
