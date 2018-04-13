@@ -12,7 +12,7 @@ En este repositorio proponemos un método para detectar de forma automática med
 
 Nuestro algoritmo consiste primeramente en detectar la placa de Petri para ello usaremos la transformada de Hough. Como vemos en la siguiente imagen podemos detectar la placa de cada foto tomada de los experimentos:
 
-[[https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/1.png|alt=Petri]]
+!(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/1.png)
 
 Una vez que nos quedamos con la placa de Petri optamos por una binarización de la imagen, de tal manera estableciendo un umbral podemos observar qué es bacteria y qué es fondo. En este algoritmo, optamos por una umbralización fija pero el algoritmo podría aprender un umbral en función de la luminosidad y condiciones de la fotografía de tal manera que obtuvieramos una representación más fina, la cual dejaremos para trabajos futuros.
 
@@ -26,7 +26,7 @@ En esta sección, explicaremos más detenidamente la herramienta de inteligencia
  detectar la placa de petri, la llamada transformada de Hough. Este es un método de extracción de características de imágenes para detectar formas que sean expresables matemáticamente. En primer lugar, fue propuesto para rectas aunque puede ser extendido para cualquier forma arbitraria (solo necesitamos una parametrización de esta forma). Una vez tenemos la parametrización de la forma deseada y queremos aprender los parámetros de la forma. En este caso, queremos encontrar circunferencias, dada la imagen queremos como resultado el radio y centro de la circunferencia que representa a la placa de petri. 
  En nuestro caso la parametrización de una circunferencia sería: 
  
- [https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2}]
+ !(https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2})
  
  De tal manera que nuestro espacio paramétrico sería https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
  
