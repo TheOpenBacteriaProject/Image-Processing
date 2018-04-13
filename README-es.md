@@ -57,7 +57,7 @@ En nuestro caso, hemos usado la función de [OpenCV](https://opencv.org/) (una l
 Con la binarización lo que buscamos es poder distinguir entre bacterias y fondos. En primer lugar pasamos la imagen a escala de grises. Las bacterias tienen un color gris más claro que el fondo por lo que establecemos un umbral de tal manera que si el valor del pixel es mayor que ese umbral lo activamos al máximo de brillo, en otro caso, lo desactivamos dejándolo en negro. Con este procedimiento tenemos una imagen de tal manera que los colores blancos corresponden a las bacterias y el negro al fondo. Así podemos calcular el área que ocupa las bacterias y ver donde se distribuyen. Ya que sabemos que el diámetro de la placa de petri es (y suele ser) de 9cm.
 
 
-## Probar el código
+## Probando el código
 
 Hemos subido el [código desarrollado en Python](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/main.py), para obtener nuestros resultados, sólamente tendrás que ejecutarlo sobre las imágenes subidas en la carpeta test.
 
