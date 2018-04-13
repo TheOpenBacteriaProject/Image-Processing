@@ -18,8 +18,10 @@ Una vez que nos quedamos con la placa de Petri optamos por una binarización de 
 
 Una vez que hemos detectado las bacterias contaremos los pixeles que se han activado y calcularemos el área que ocupan.
 
-!(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/2.png)
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/2.png)
+
 !(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/3.png)
+
 !(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/4.png)
 
 ## Transformada de Hough
