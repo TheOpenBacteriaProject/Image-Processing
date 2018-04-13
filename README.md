@@ -50,5 +50,6 @@ Con la binarización lo que buscamos es poder distinguir entre bacterias y fondo
 
 – Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
 Shapes*, Pattern Recognition 13:111-122, 1981.
+
 – Illingworth, J. and J. Kittler, *Survey of the Hough Transform*, Computer
 Vision, Graphics, and Image Processing, 44(1):87-116, 1988
