@@ -48,3 +48,11 @@ Once we have a binary pic that represents the edges we have to check it with the
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/explicacion.PNG)
 
 In our case we have used the function [OpenCV](https://opencv.org/) to find  the circle that correspond to the Petri dish. We have chosen a range in which we "know" our algorithm will find the original dish.
+
+## Bibliography
+
+* Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
+Shapes*, Pattern Recognition 13:111-122, 1981.
+
+* Illingworth, J. and J. Kittler, *Survey of the Hough Transform*, Computer
+Vision, Graphics, and Image Processing, 44(1):87-116, 1988
