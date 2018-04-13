@@ -12,7 +12,7 @@ En este repositorio proponemos un método para detectar de forma automática med
 
 Nuestro algoritmo consiste primeramente en detectar la placa de Petri para ello usaremos la transformada de Hough. Como vemos en la siguiente imagen podemos detectar la placa de cada foto tomada de los experimentos:
 
-[[https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/1.png]]
+[[https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/1.png|alt=Petri]]
 
 Una vez que nos quedamos con la placa de Petri optamos por una binarización de la imagen, de tal manera estableciendo un umbral podemos observar qué es bacteria y qué es fondo. En este algoritmo, optamos por una umbralización fija pero el algoritmo podría aprender un umbral en función de la luminosidad y condiciones de la fotografía de tal manera que obtuvieramos una representación más fina, la cual dejaremos para trabajos futuros.
 
