@@ -38,7 +38,7 @@ En esta sección, explicaremos más detenidamente la herramienta de inteligencia
 
 [Explicacion]
 
-En nuestro caso, hemos usado la función de OpenCV (una librería de software libre para visión por computador que está implementada entre otros lenguajes en python) para encontrar el círculo correspondiente a la placa de petri. Hemos elegido un rango entre el cual esperamos que se encuentre la placa y una distancia entre centros muy grande para que solo nos elija el círculo con más votos que será el de la placa.
+En nuestro caso, hemos usado la función de [OpenCV](https://opencv.org/) (una librería de software libre para visión por computador que está implementada entre otros lenguajes en python) para encontrar el círculo correspondiente a la placa de petri. Hemos elegido un rango entre el cual esperamos que se encuentre la placa y una distancia entre centros muy grande para que solo nos elija el círculo con más votos que será el de la placa.
  
  ## Binarización
 
