@@ -49,6 +49,14 @@ Once we have a binary pic that represents the edges we have to check it with the
 
 In our case we have used the function [OpenCV](https://opencv.org/) to find  the circle that correspond to the Petri dish. We have chosen a range in which we "know" our algorithm will find the original dish.
 
+## Binarization
+
+With binarization we are searching for a method to separate bacteria and dish. In first place we convert the pic to a grey scale pic. Bacteria have a light grey color than the dish. So we set up a value to convert bacteria corresponding color into white and we do the same with the dish but into black. Now calculating the area is easy as counting white pixels inside our circunference and rescale it into the real proportions of a Petri dish.
+
+## Testing the code
+
+We've uploaded [our Python code](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/main.py) to obtain our results. You only have to execute it for the pics in folder *Test*.
+
 ## Bibliography
 
 * Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
