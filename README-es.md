@@ -67,4 +67,4 @@ Hemos subido el [código desarrollado en Python](https://github.com/TheOpenBacte
 Shapes*, Pattern Recognition 13:111-122, 1981.
 
 * Illingworth, J. and J. Kittler, *Survey of the Hough Transform*, Computer
-Vision, Graphics, and Image Processing, 44(1):87-116, 1988
+Vision, Graphics, and Image Processing, 44(1):87-116, 1988.
