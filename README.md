@@ -16,6 +16,8 @@ Nuestro algoritmo consiste primeramente en detectar la placa de Petri para ello 
 
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/hough2.png)
 
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/seg4.png)
+
 Una vez que nos quedamos con la placa de Petri optamos por una binarización de la imagen, de tal manera estableciendo un umbral podemos observar qué es bacteria y qué es fondo. En este algoritmo, optamos por una umbralización fija pero el algoritmo podría aprender un umbral en función de la luminosidad y condiciones de la fotografía de tal manera que obtuvieramos una representación más fina, la cual dejaremos para trabajos futuros.
 
 Una vez que hemos detectado las bacterias contaremos los pixeles que se han activado y calcularemos el área que ocupan.
