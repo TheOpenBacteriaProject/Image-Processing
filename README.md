@@ -1,4 +1,5 @@
 # Image-Processing
+![](https://raw.githubusercontent.com/TheOpenBacteriaProject/Branding/master/Documentation-Media/Document-Header.png)
 En este repositorio compartiremos el código para las imágenes obtenidas de los experimentos las cuales serán subidas.
 
 ## Introducción
@@ -46,7 +47,7 @@ En esta sección, explicaremos más detenidamente la herramienta de inteligencia
  
  Una vez que tenemos una imagen binaria (blanco y negro) en la cual tenemos representadas las aristas, tenemos que ir "probando" con la figura que hemos elegido usando distintos valores de los parámetros. Se llama transformada, ya que buscaremos los posibles valores de los parámetros en el espacio paramétrico. Ahí buscaremos las figuras que se intersecan por lo tanto cuantas más intersecciones haya más votos hay para que por ahí pase nuestra figura. Un ejemplo ilustrativo de lo descrito es lo siguiente:
 
-[Explicacion]
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/explicacion.PNG)
 
 En nuestro caso, hemos usado la función de [OpenCV](https://opencv.org/) (una librería de software libre para visión por computador que está implementada entre otros lenguajes en python) para encontrar el círculo correspondiente a la placa de petri. Hemos elegido un rango entre el cual esperamos que se encuentre la placa y una distancia entre centros muy grande para que solo nos elija el círculo con más votos que será el de la placa.
  
