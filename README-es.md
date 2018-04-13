@@ -12,7 +12,7 @@ En este repositorio proponemos un método para detectar de forma automática med
 
 ## Nuestro algoritmo
 
-Nuestro algoritmo consiste primeramente en detectar la placa de Petri para ello usaremos la transformada de Hough. Como vemos en la siguiente imagen podemos detectar la placa de cada foto tomada de los experimentos:
+Nuestro algoritmo consiste primeramente en detectar la placa de Petri. Para ello usaremos la transformada de Hough. Como vemos en la siguiente imagen, podemos detectar la placa de cada foto tomada de los experimentos:
 
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/hough.png)
 
@@ -32,21 +32,21 @@ Una vez que hemos detectado las bacterias contaremos los pixeles que se han acti
 
 ## Transformada de Hough
 
-En esta sección, explicaremos más detenidamente la herramienta de inteligencia artificial que hemos utilizado para
- detectar la placa de petri, la llamada transformada de Hough. Este es un método de extracción de características de imágenes para detectar formas que sean expresables matemáticamente. En primer lugar, fue propuesto para rectas aunque puede ser extendido para cualquier forma arbitraria (solo necesitamos una parametrización de esta forma). Una vez tenemos la parametrización de la forma deseada y queremos aprender los parámetros de la forma. En este caso, queremos encontrar circunferencias, dada la imagen queremos como resultado el radio y centro de la circunferencia que representa a la placa de petri. 
- En nuestro caso la parametrización de una circunferencia sería: 
+En esta sección, explicaremos más detenidamente la herramienta de inteligencia artificial que hemos utilizado para detectar la placa de petri, la llamada transformada de Hough. Este es un método de extracción de características de imágenes para detectar formas que sean expresables matemáticamente. En primer lugar, fue propuesto para rectas aunque puede ser extendido para cualquier forma arbitraria (solo necesitamos una parametrización de esta forma). Una vez tenemos la parametrización de la forma deseada y queremos aprender los parámetros de la forma. En este caso, queremos encontrar circunferencias, dada la imagen queremos como resultado el radio y centro de la circunferencia que representa a la placa de petri. 
+
+En nuestro caso la parametrización de una circunferencia sería: 
  
  ![](https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2})
  
- De tal manera que nuestro espacio paramétrico sería ![](https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r)). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
+De tal manera que nuestro espacio paramétrico sería ![](https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r)). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
  
- La idea del algoritmo es binarizar la imagen detectando aristas de la siguiente manera:
+La idea del algoritmo es binarizar la imagen detectando aristas de la siguiente manera:
 
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/aristas.png)
 
- Podemos usar para esto, por ejemplo, el detector de Canny. El cual sirve para revelar los bordes de una imagen.
+Podemos usar para esto, por ejemplo, el detector de Canny. El cual sirve para revelar los bordes de una imagen.
  
- Una vez que tenemos una imagen binaria (blanco y negro) en la cual tenemos representadas las aristas, tenemos que ir "probando" con la figura que hemos elegido usando distintos valores de los parámetros. Se llama transformada, ya que buscaremos los posibles valores de los parámetros en el espacio paramétrico. Ahí buscaremos las figuras que se intersecan por lo tanto cuantas más intersecciones haya más votos hay para que por ahí pase nuestra figura. Un ejemplo ilustrativo de lo descrito es lo siguiente:
+Una vez que tenemos una imagen binaria (blanco y negro) en la cual tenemos representadas las aristas, tenemos que ir "probando" con la figura que hemos elegido usando distintos valores de los parámetros. Se llama transformada, ya que buscaremos los posibles valores de los parámetros en el espacio paramétrico. Ahí buscaremos las figuras que se intersecan por lo tanto cuantas más intersecciones haya más votos hay para que por ahí pase nuestra figura. Un ejemplo ilustrativo de lo descrito es lo siguiente:
 
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/explicacion.PNG)
 
@@ -63,8 +63,8 @@ Hemos subido el [código desarrollado en Python](https://github.com/TheOpenBacte
 
 ## Bibliografía
 
-– Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
+* Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
 Shapes*, Pattern Recognition 13:111-122, 1981.
 
-– Illingworth, J. and J. Kittler, *Survey of the Hough Transform*, Computer
+* Illingworth, J. and J. Kittler, *Survey of the Hough Transform*, Computer
 Vision, Graphics, and Image Processing, 44(1):87-116, 1988
