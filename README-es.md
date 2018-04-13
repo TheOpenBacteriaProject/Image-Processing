@@ -59,6 +59,7 @@ Con la binarización lo que buscamos es poder distinguir entre bacterias y fondo
 ## Probar el código
 
 Hemos subido el [código desarrollado en Python](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/main.py), para obtener nuestros resultados, sólamente tendrás que ejecutarlo sobre las imágenes subidas en la carpeta test.
+
 ## Bibliografía
 
 – Ballard, D. H. *Generalizing the Hough Transform to Detect Arbitrary
