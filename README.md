@@ -12,7 +12,9 @@ En este repositorio proponemos un método para detectar de forma automática med
 
 Nuestro algoritmo consiste primeramente en detectar la placa de Petri para ello usaremos la transformada de Hough. Como vemos en la siguiente imagen podemos detectar la placa de cada foto tomada de los experimentos:
 
-!(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/1.png)
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/hough.png)
+
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/hough2.png)
 
 Una vez que nos quedamos con la placa de Petri optamos por una binarización de la imagen, de tal manera estableciendo un umbral podemos observar qué es bacteria y qué es fondo. En este algoritmo, optamos por una umbralización fija pero el algoritmo podría aprender un umbral en función de la luminosidad y condiciones de la fotografía de tal manera que obtuvieramos una representación más fina, la cual dejaremos para trabajos futuros.
 
@@ -20,9 +22,9 @@ Una vez que hemos detectado las bacterias contaremos los pixeles que se han acti
 
 ![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/2.png)
 
-!(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/3.png)
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/3.png)
 
-!(https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/4.png)
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/4.png)
 
 ## Transformada de Hough
 
@@ -30,12 +32,14 @@ En esta sección, explicaremos más detenidamente la herramienta de inteligencia
  detectar la placa de petri, la llamada transformada de Hough. Este es un método de extracción de características de imágenes para detectar formas que sean expresables matemáticamente. En primer lugar, fue propuesto para rectas aunque puede ser extendido para cualquier forma arbitraria (solo necesitamos una parametrización de esta forma). Una vez tenemos la parametrización de la forma deseada y queremos aprender los parámetros de la forma. En este caso, queremos encontrar circunferencias, dada la imagen queremos como resultado el radio y centro de la circunferencia que representa a la placa de petri. 
  En nuestro caso la parametrización de una circunferencia sería: 
  
- !(https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2})
+ ![](https://latex.codecogs.com/gif.latex?(x-x_{0})^{2}&space;&plus;&space;(y-y_{0})^{2}&space;=&space;r^{2})
  
- De tal manera que nuestro espacio paramétrico sería https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
+ De tal manera que nuestro espacio paramétrico sería ![](https://latex.codecogs.com/gif.latex?(x_{0},y_{0},r)). Tenemos que encontrar los valores de estos parámetros de tal manera que nos representara la placa de petri de las imágenes.
  
  La idea del algoritmo es binarizar la imagen detectando aristas de la siguiente manera:
- [aristas]
+
+![](https://github.com/TheOpenBacteriaProject/Image-Processing/blob/master/Images/aristas.png)
+
  Podemos usar para esto, por ejemplo, el detector de Canny. El cual sirve para revelar los bordes de una imagen.
  
  Una vez que tenemos una imagen binaria (blanco y negro) en la cual tenemos representadas las aristas, tenemos que ir "probando" con la figura que hemos elegido usando distintos valores de los parámetros. Se llama transformada, ya que buscaremos los posibles valores de los parámetros en el espacio paramétrico. Ahí buscaremos las figuras que se intersecan por lo tanto cuantas más intersecciones haya más votos hay para que por ahí pase nuestra figura. Un ejemplo ilustrativo de lo descrito es lo siguiente:
